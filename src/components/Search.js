@@ -5,9 +5,18 @@ const Search = () => {
   const [term, setTerm] = useState("");
 
   useEffect(() => {
-    axios.get("fsdfdsfdfdsf").then((response) => {
-      console.log(response.data);
-    });
+    const search = async () => {
+      await axios.get("https://en.wikipedia.org/w/api.php", {
+        params: {
+          action: "query",
+          list: "search",
+          origin: "*",
+          format: "json",
+          srsearch: term,
+        },
+      });
+    };
+    search();
   }, [term]);
   return (
     <div>
