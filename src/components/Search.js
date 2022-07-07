@@ -5,9 +5,9 @@ const Search = () => {
   const [term, setTerm] = useState("");
 
   useEffect(() => {
-    (async () => {
-      await axios.get("fsdffdfsd");
-    })();
+    axios.get("fsdfdsfdfdsf").then((response) => {
+      console.log(response.data);
+    });
   }, [term]);
   return (
     <div>
