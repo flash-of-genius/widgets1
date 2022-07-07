@@ -28,6 +28,7 @@ const Search = () => {
         <div className="content">
           <div className="header">{result.title}</div> {result.snippet}
         </div>
+        <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
       </div>
     );
   });
